@@ -38,7 +38,7 @@ public class ViewController : UIViewController {
       if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)
       {
          let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-         let message = NSLocalizedString("I just finished the first project in iOS 9 (8) SDK Development. #pragsios8/9", comment: "")
+         let message = NSLocalizedString("I just finishad the first project in iOS 9 (8) SDK Development. #pragsios8/9", comment: "")
          tweetVC.setInitialText(message)
          presentViewController(tweetVC, animated: true, completion: nil)
       }
