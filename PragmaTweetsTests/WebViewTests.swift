@@ -36,9 +36,6 @@ class WebViewTests: XCTestCase, UIWebViewDelegate {
             loadedWebViewExpectation!.fulfill()
          }
       }
-      
-/*      XCTAssertNotNil(webViewContents, "web view contents are nil")*/
-
    }
    
    func testAutomaticWebLoad() {
