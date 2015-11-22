@@ -41,6 +41,7 @@ public class ViewController : UIViewController {
          let message = NSLocalizedString("I just finished the first project in iOS 9 (8) SDK Development. #pragsios8/9", comment: "")
          tweetVC.setInitialText(message)
          presentViewController(tweetVC, animated: true, completion: nil)
+         
       }
       else
       {
