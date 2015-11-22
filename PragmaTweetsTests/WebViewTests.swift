@@ -9,7 +9,6 @@
 import XCTest
 import PragmaTweets
 
-
 class WebViewTests: XCTestCase, UIWebViewDelegate {
    
    var loadedWebViewExpectation : XCTestExpectation?
