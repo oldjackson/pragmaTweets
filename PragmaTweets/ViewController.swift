@@ -10,8 +10,15 @@ import UIKit
 import Social
 
 public class ViewController : UITableViewController {
+   
+   var parsedTweets : Array <ParsedTweet> = [
+      ParsedTweet(tweetText: "ioS 8 SDK Development now in print. Swift programming FTW!", userName: "@pragprog", createdAt: "2015-11-24 00:20:30", userAvatarURL: defaultAvatarURL),
+      ParsedTweet(tweetText: "Math is cool", userName: "@oldjackson", createdAt: "2015-11-24 00:20:30", userAvatarURL: defaultAvatarURL),
+      ParsedTweet(tweetText: "Anime is cool", userName: "@invalidname", createdAt: "2015-11-24 00:20:30", userAvatarURL: defaultAvatarURL)
+   ]
 
    func reloadTweets() {
+      tableView.reloadData()
       /*let url = NSURL(string: "https://twitter.com/oldjackson")
       let urlRequest = NSURLRequest(URL: url!)
       twitterWebView.loadRequest(urlRequest)*/
@@ -19,7 +26,7 @@ public class ViewController : UITableViewController {
 
    public override func viewDidLoad() {
       super.viewDidLoad()
-      self.reloadTweets()
+      reloadTweets()
    }
 
    public override func didReceiveMemoryWarning() {
@@ -44,23 +51,19 @@ public class ViewController : UITableViewController {
    
    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int
    {
-      return 5
+      return 1
    }
-   
-   override public func tableView(_tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-   {
-      return "Section \(section)"
-   }
-   
+  
    override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int
    {
-      return section + 1
+      return parsedTweets.count
    }
    
    override public func tableView (_tableView: UITableView,  cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
    {
       let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-      cell.textLabel!.text = "Row \(indexPath.row)"
+      let parsedTweet = parsedTweets[indexPath.row]
+      cell.textLabel?.text = parsedTweet.tweetText
       
       return cell
    }

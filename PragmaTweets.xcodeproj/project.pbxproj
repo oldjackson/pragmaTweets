@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1391A41C03CAAF00385A1D /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1391A31C03CAAF00385A1D /* ParsedTweet.swift */; };
 		3C27711C1BCB148B004BBB39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27711B1BCB148B004BBB39 /* AppDelegate.swift */; };
 		3C27711E1BCB148B004BBB39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27711D1BCB148B004BBB39 /* ViewController.swift */; };
 		3C2771211BCB148B004BBB39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C27711F1BCB148B004BBB39 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1391A31C03CAAF00385A1D /* ParsedTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweet.swift; sourceTree = "<group>"; };
 		3C2771181BCB148B004BBB39 /* PragmaTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C27711B1BCB148B004BBB39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C27711D1BCB148B004BBB39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				3CB5EF451BFBEC7F004B5A66 /* Localizable.strings */,
 				3C27711B1BCB148B004BBB39 /* AppDelegate.swift */,
 				3C27711D1BCB148B004BBB39 /* ViewController.swift */,
+				3C1391A31C03CAAF00385A1D /* ParsedTweet.swift */,
 				3C27711F1BCB148B004BBB39 /* Main.storyboard */,
 				3C2771221BCB148B004BBB39 /* Assets.xcassets */,
 				3C2771241BCB148B004BBB39 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1391A41C03CAAF00385A1D /* ParsedTweet.swift in Sources */,
 				3C27711E1BCB148B004BBB39 /* ViewController.swift in Sources */,
 				3C27711C1BCB148B004BBB39 /* AppDelegate.swift in Sources */,
 			);
