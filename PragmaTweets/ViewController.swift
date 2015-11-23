@@ -9,21 +9,14 @@
 import UIKit
 import Social
 
-public class ViewController : UIViewController {
+public class ViewController : UITableViewController {
 
    func reloadTweets() {
-      let url = NSURL(string: "https://twitter.com/oldjackson")
+      /*let url = NSURL(string: "https://twitter.com/oldjackson")
       let urlRequest = NSURLRequest(URL: url!)
-      twitterWebView.loadRequest(urlRequest)
+      twitterWebView.loadRequest(urlRequest)*/
    }
 
-   
-   @IBAction func handleShowMyTweetsTapped(sender: UIButton) {
-      reloadTweets()
-   }
-   
-   @IBOutlet public weak var twitterWebView: UIWebView!
-   
    public override func viewDidLoad() {
       super.viewDidLoad()
       self.reloadTweets()
@@ -47,7 +40,29 @@ public class ViewController : UIViewController {
       {
          print("Can't send tweet")
       }
-    }
+   }
+   
+   override public func numberOfSectionsInTableView(tableView: UITableView) -> Int
+   {
+      return 5
+   }
+   
+   override public func tableView(_tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+   {
+      return "Section \(section)"
+   }
+   
+   override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+   {
+      return section + 1
+   }
+   
+   override public func tableView (_tableView: UITableView,  cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+   {
+      let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+      cell.textLabel!.text = "Row \(indexPath.row)"
+      
+      return cell
+   }
 
 }
-
